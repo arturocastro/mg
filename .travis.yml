@@ -1,8 +1,20 @@
 language: c
 os:
-  - linux
-  - osx
+- linux
+- osx
 compiler:
-  - clang
-  - gcc
+- clang
+- gcc
 script: make
+env:
+  global:
+    secure: ynt/T93uOiRj85kFCLI9rb7BPBKN53U1Mr2J16wT9oX6UIP4pNv8w3youROjQq/4sY6g2gMWXxUGkHQjhV+gYLx05HHrphi4g38RWgmoWf2vb0Gh4/dcOAWBhV+oxTplQf6MUMrBh7sU/+6Y0kdfFqpF4bk2VtrJHyfHZWuYZtE7myYuCiWoNZWfGoVH9jscJlrbgiuA8sIZBzuiFxEurk2o/9HPyVbaBg7It6skzhZTFsMgZ1WGOu8v2PzFn+2RThgNdNK1PkCnnQQBS+DCgjggqYE+qwrnbVO+JUs5g5v3KuhL5I2MUh5DyVewm6AGT1PGnpE7FVwmjwNYKkRRE1L1+vUO1aZO4vumG8zEhKupuTHoa3Na3NAQ7AAicZip9n8kH9TIktrfuCGv2h1L7KBSSqaMPvd+pnJwMuFezVlNx8x8h3bOvWg7JuR51eCOPDVLFNa/Gh/T514CfSAfvA2jl1MlPNJ4fUz2F1ik20iKZzZWiMja1zFkXCfaHsNjTyzzt0XSy2gLN0Rkz/AQAHzc8ieCOhFWqf3/tbYU5SMA73rOIk3KUTNyhEnLHttKSMFdf7r/ojnjRMiTiclcMSz7UPMeTynZK4EIn1HaNyTxqcIeI+/u5+Z9Ialxk4NclEFv5xF1vZm2foFO5YKudIpXvwguJJP3B+Uk246YJEM=
+addons:
+  coverity_scan:
+    project:
+      name: arturocastro/mg
+      description: OpenBSD Mg editor - Fork for contributions
+    notification_email: arturo.castrop@live.com
+    build_command_prepend: make clean
+    build_command: make
+    branch_pattern: coverity_scan
