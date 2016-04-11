@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/arturocastro/mg.svg?branch=master)](https://travis-ci.org/arturocastro/mg)
 mg
 ==
 This is a portable version of the Mg editor from OpenBSD by the former
